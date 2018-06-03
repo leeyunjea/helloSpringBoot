@@ -52,7 +52,7 @@ public class CustomerController {
 		String lastName = customer.getLastName();
 				
 		repository.save(new Customer(firstName, lastName));
-	
+	 
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
  
