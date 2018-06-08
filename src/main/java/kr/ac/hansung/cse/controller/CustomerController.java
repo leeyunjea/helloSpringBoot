@@ -56,9 +56,9 @@ public class CustomerController {
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
  
-	@GetMapping(value="/customers/{lastName}",  produces=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/customers/{lastName}",   produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Customer>> findByLastName(@PathVariable String lastName) {
- 
+  
 		logger.debug("Calling findByLastName( )" );
 		
 		List<Customer> customers = repository.findByLastName(lastName);
